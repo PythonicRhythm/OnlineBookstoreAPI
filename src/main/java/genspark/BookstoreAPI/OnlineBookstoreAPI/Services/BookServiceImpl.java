@@ -39,8 +39,33 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> getBooksByTitleSort() {
+    public List<Book> getBooksByTitleSort()
+    {
         return bookDAO.findBooksByTitleSort();
+    }
+
+    @Override
+    public List<Book> getBooksByAuthor(String author)
+    {
+        return bookDAO.findBooksByAuthor(author);
+    }
+
+    @Override
+    public List<Book> getBooksByAuthorSort()
+    {
+        return bookDAO.findBooksByAuthorSort();
+    }
+
+    @Override
+    public List<Book> getBooksByPrice(double price)
+    {
+        return bookDAO.findBooksByPrice(price);
+    }
+
+    @Override
+    public List<Book> getBooksByPriceSort()
+    {
+        return bookDAO.findBooksByPriceSort();
     }
 
     @Override
